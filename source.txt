@@ -1,0 +1,31 @@
+int left_sensor;
+int right_sensor;
+int dead_band = 30;
+int left = 5;
+int right = 6;
+int power = 200;
+
+void setup() {
+  pinMode(left, OUTPUT);
+  pinMode(right, OUTPUT);
+}
+
+void loop() {
+  int left_sensor = analogRead(A0);
+  int right_sensor = analogRead(A1);
+
+  if(left_sensor > right_sensor + dead_band){
+    analogWrite(left, power);
+    analogWrite(right, 0);
+  }
+  else if(right_sensor > left_sensor + dead_band){
+    analogWrite(right, power);
+    analogWrite(left, 0);
+  }
+  else{
+    analogWrite(left, 0);
+    analogWrite(right, 0);
+  }
+  
+  delay(10);
+}
