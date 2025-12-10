@@ -7,15 +7,16 @@ The project combines **renewable power generation**, **battery management**, and
 ![Project](images/project.jpg)
 
 ### Components  
-- 2× Solar Panels (1W each)
+- 2× Solar Panels (6V, 160mA, 0.96W each)
 - 18560 Lithium Battery  
 - 18560 Battery Charging Module  
 - 5V 1A Step-Up Converter (USB output)  
 - Arduino Uno  
 - L9110 Motor Controller  
 - 12V 10 RPM Motor  
-- 2× Photoresistors (LDR) with 1kΩ resistors  
-- N4004 diode  
+- 2× Photoresistors (5528 LDR)
+- 2× 1kΩ resistors  
+- N4004 diode (1N4004-T)  
 - Power switch  
 - Wiring, connectors, mounting hardware  
 
